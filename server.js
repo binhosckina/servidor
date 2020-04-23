@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('adicionarProduto', (id, quantidade) => {
-        var produto = produtos.find(x => x.id = id)
+        var produto = produtos.find(x => x.id == id)
 
         if (produto) {
             produto.quantidade = quantidade
@@ -39,13 +39,13 @@ server.listen(3030, () => {
 })
 
 produtos = [
-    { "id": 1, "nome": "Arroz", "valor": 3 },
-    { "id": 2, "nome": "Feijão", "valor": 4 },
-    { "id": 3, "nome": "Batata", "valor": 5 },
-    { "id": 4, "nome": "Água", "valor": 2 },
-    { "id": 5, "nome": "Carne", "valor": 40 },
-    { "id": 6, "nome": "Cerveja", "valor": 4 },
-    { "id": 7, "nome": "Tomate", "valor": 8 },
-    { "id": 8, "nome": "Cebola", "valor": 1 },
-    { "id": 9, "nome": "Pizza", "valor": 12 }
+    { "id": 1, "nome": "Arroz", "valor": 3.40 },
+    { "id": 2, "nome": "Feijão", "valor": 4.90 },
+    { "id": 3, "nome": "Batata", "valor": 5.95 },
+    { "id": 4, "nome": "Água", "valor": 2.10 },
+    { "id": 5, "nome": "Carne", "valor": 40.05 },
+    { "id": 6, "nome": "Cerveja", "valor": 4.50 },
+    { "id": 7, "nome": "Tomate", "valor": 8.20 },
+    { "id": 8, "nome": "Cebola", "valor": 1.99 },
+    { "id": 9, "nome": "Pizza", "valor": 12.10 }
 ]

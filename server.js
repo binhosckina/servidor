@@ -12,7 +12,8 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
     socket.on('abrirCaixa', () => {
         console.log('Caixa aberto');
-        socket.emit('abrirCaixa');
+        var dataHora = new Date();
+        socket.emit('abrirCaixa', dataHora);
     });
 
     socket.on('fecharCaixa', () => {
